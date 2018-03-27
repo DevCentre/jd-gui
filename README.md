@@ -1,3 +1,29 @@
+JDK9 FIX! 
+
+
+###############  Thanks to @fhj658 - https://github.com/fjh658.  ###############
+
+
+Steps: 
+
+
+1 . modify Info.plist
+
+2 ->
+  2.1 - VMOptions=-Xms512m --add-opens java.base/jdk.internal.loader=ALL-UNNAMED --add-opens jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED
+
+OR
+  
+  2.2 - modify universalJavaApplicationStub.sh
+
+OR
+
+  2.3 (workaround): java --add-opens java.base/jdk.internal.loader=ALL-UNNAMED --add-opens jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED -jar /Applications/JD.app/Contents/Resources/Java/jd-gui-1.4.0.jar
+
+
+
+
+
 #JD-GUI
 
 JD-GUI, a standalone graphical utility that displays Java sources from CLASS files.
